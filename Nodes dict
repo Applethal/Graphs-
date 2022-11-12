@@ -1,0 +1,23 @@
+Nodes_set = {
+    'Nodes': (),
+    'Wheights': (),
+}
+
+Nodes_set_limit = 100
+Node = []
+while Nodes_set_limit != 0 and Node != "00":
+    Node = input("Please input the Node's name, terminate by inputting a 00 : ")
+    if Node == "00":
+        break
+    Weight = input("Input its corresponding Weight : ")
+
+    if Node not in Nodes_set['Nodes']:
+        Nodes_set['Nodes'] = Nodes_set['Nodes'] + (Node, )
+        Nodes_set['Wheights'] = Nodes_set['Wheights'] + (Weight, )
+    else:
+        print("You have already input this node before")
+
+    Nodes_set_limit -= 1
+
+# display the nodes and weights
+print(Nodes_set)
